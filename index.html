@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- set the project Name -->
+    <title>Contact Form</title>
+    <!-- set the project icon -->
+    <link rel="icon" href="image/favicon-32x32.png">
+    <!--the main css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawsome file -->
+    <link rel="stylesheet" href="all.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Contact Us</h1>
+    <form class="form">
+        <!-- the name container -->
+        <div class="name">
+            <!-- the first name container -->
+            <div class="firstName">
+                <!-- first name label -->
+                <label class="labelcs name-first" for="firstName">First Name <span><i class="fa-solid fa-star"></i></span></label>
+                <!-- first name input -->
+                <input type="text" id="firstName" name="firstName" autocomplete="off">
+                <!-- error label for first name -->
+                <label id="FirstNameErr" class="labeler name-first hide" for="firstName">This field is required</label>
+            </div>
+            <!-- the last name container -->
+            <div class="lastName">
+                <!-- last name label -->
+                <label class="labelcs name-last" for="lastName">Last Name <span><i class="fa-solid fa-star"></i></span></label>
+                <!-- last name input -->
+                <input type="text" id="lastName" name="lastName" autocomplete="off">
+                <!-- error label for last name -->
+                <label id="LastNameErr" class="labeler name-last hide" for="lastName">This field is required</label>
+            </div>
+        </div>
+        <!-- the email container -->
+        <div class="email">
+            <!-- email label -->
+            <div class="email-label">
+                <label class="labelcs" for="email">Email Address <span><i class="fa-solid fa-star"></i></span></label>
+            </div>
+            <!-- email input -->
+            <div class="email-input">
+                <input class="email-input"  type="text" id="email" name="email" autocomplete="off"> 
+            </div>
+            <!-- error label for email -->
+            <div class="email-error">
+                <label id="EmailErr" class="labeler name-last hide" for="lastName">Please enter a valid email address</label>
+            </div>
+        </div>
+        <!-- the query container  -->
+        <div class="query">
+            <!-- query label -->
+            <div class="query-label">
+                <label class="labelcs" for="query">Query Type <span><i class="fa-solid fa-star"></i></span></label>
+            </div>
+            <!-- query input -->
+            <div class="query-input">
+                <!-- general container selactor -->
+                <div class="general" id="Maingeneral">
+                    <!-- general input radio -->
+                    <input onclick="back(1)" type="radio" id="general" name="Query" value="general enquiry" >
+                    <!-- genaral label -->
+                    <label for="general">General Enquiry</label>                    
+                </div>
+                <!-- support container selector -->
+                <div class="support" id="Mainsupport">
+                    <!-- support input radio -->
+                    <input onclick="back(2)" type="radio" id="support" name="Query" value="support request" >
+                    <!-- support label -->
+                    <label for="support">Support Request</label>    
+                </div>
+            </div>
+            <!-- error label for query -->
+            <div class="query-error">
+                <label id="QueryErr" class="labeler name-last hide" for="lastName">Please select a query type</label>
+            </div>
+        </div>
+        <!-- the message container -->
+        <div class="message">
+            <!-- the message label -->
+            <div class="message-label">
+                <label class="labelcs" for="message">Message <span><i class="fa-solid fa-star"></i></span></label>
+            </div>
+            <!-- the message input textarea -->
+            <div class="message-input">
+                <textarea name="message" id="message" autocomplete="off"></textarea> 
+            </div>
+            <!-- the error for message  -->
+            <div class="message-error">
+                <label id="MessageErr" class="labeler name-last hide" for="lastName">This field is required</label>
+            </div>
+        </div>
+        <!-- the consent checkbox container -->
+        <div class="consent">
+            <!-- the consent checbox input -->
+            <div class="consent-input">
+                <!-- the consent checbox  -->
+                <input  type="checkbox" name="consent" id="consent">
+                <!-- the consent label -->
+                <label class="labelcs" for="consent">I consent to being contacted by the team <span><i class="fa-solid fa-star"></i></span></label>
+            </div>
+            <!-- the error for consent -->
+            <div class="consent-error">
+                <label id="ConsentErr" class="labeler name-last hide" for="lastName">To submit this form, please consent to being contacted</label>
+            </div>
+        </div>
+        <!-- button for sumbit -->
+        <button type="button" onclick="validation()">Submit</button>
+    </form>
+</div>
+<!-- the message container for succsses  -->
+<div class="succsses">
+    <!-- the message for success header -->
+    <div class="header">
+        <!-- icon correct -->
+        <i class="fa-regular fa-circle-check"></i>
+        <!-- the success message head -->
+        <h4>Message Sent!</h4>
+    </div>
+    <!-- the message -->
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+</div>
+<!-- the link for the programmer -->
+<div class="mentor">
+    Challenge by <a href="https://www.frontendmentor.io/home">Frontend Mentor.</a> Coded by <a href="https://www.frontendmentor.io/profile/MidoGhareeb">Mohamed Ghareeb.</a>
+</div>
+<!-- the main java script file -->
+    <script src="script.js"></script>
+</body>
+</html>

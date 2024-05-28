@@ -1,0 +1,333 @@
+/* to import the font type  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Caveat:wght@400..700&family=Changa:wght@200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+/* the main variables color */
+:root{
+    --Green-200-lighter: #e0f1e7;
+    --Green-600-medium: #0c7d69;
+    --Red: #d73c3c;
+    --White: hsl(0, 0%, 100%);
+    --Grey-500-medium: #87a3a6;
+    --Grey-900-darker: #063f36;
+}
+/* the main css style for the web */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+.labeler{
+    color: var(--Red);
+}
+/* the body styling */
+body{
+    font-size: 16px;
+    background-color: var(--Green-200-lighter);
+}
+/* container styling */
+.container{
+    background-color: var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 740px;
+    min-height: fit-content;
+    padding: 40px;
+    border-radius: 15px;
+    gap: 15px;
+}
+/* form styling */
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+    gap: 20px;
+}
+.form input,
+.form textarea{
+    cursor: pointer;
+    border-color: #474747; 
+}
+.form input:focus,
+.form textarea:focus{
+    border: var(--Green-600-medium) 2px solid;
+}
+.hide{
+display: none;
+}
+/* the first and last name styling */
+.name{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.firstName,
+.lastName{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.firstName input,
+.lastName input,
+.email-input input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+}
+/* the email styling */
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.email-input input{
+    width: 100%;
+}
+.email-label{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.email-error{
+    width: 100%;
+}
+.email-error label{
+    width: 100%;
+}
+/* the query styling */
+.query,
+.message
+,.consent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.query .query-input .general label,
+.query .query-input .support label{
+    cursor: pointer;
+}
+.query .query-input{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+} 
+.query .query-input .general,
+.query .query-input .support{
+    width: 50%;
+    display: flex;
+    border: 1px solid;
+    padding: 15px 25px;
+    border-radius: 5px;
+    gap: 10px;
+    position: relative;
+    background-color: #fff;
+}   
+.query .query-input .general input[type="radio"],
+.query .query-input .support input[type="radio"]{
+    appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-progress-appearance: none;
+    -ms-progress-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--White);
+    border: 1px solid var(--Green-600-medium);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.query .query-input .general input[type="radio"]::after,
+.query .query-input .support input[type="radio"]::after{
+    content: "";
+    font-weight: 900;
+    background-color: var(--Green-600-medium);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: none;
+    
+}
+.query .query-input .general input[type="radio"]:checked:after,
+.query .query-input .support input[type="radio"]:checked:after{
+    display: block;
+}
+/* the message styling */
+.message-input{
+    width: 100%;
+}
+.message-input textarea{
+    width: 100%;
+    height: 90px;
+    resize: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+}
+/* the consent styling */
+#ConsentErr{
+    width: 100%;
+}
+.consent .consent-input{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.consent .consent-input label{
+    cursor: pointer;
+}
+.consent .consent-input input[type="checkbox"]{
+    appearance: none;
+    -ms-progress-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--White);
+    border: 1px solid var(--Green-600-medium);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.consent .consent-input input[type="checkbox"]::after{
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #fff;
+}
+.consent .consent-input input[type="checkbox"]:checked{
+    background-color: var(--Green-600-medium);
+}
+/* the button styling */
+button{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--White);
+    border: none;
+    background-color: var(--Green-600-medium);
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color: var(--Grey-900-darker);
+}
+/* the star styling */
+.labelcs{
+    display: flex;
+    flex-wrap:wrap;
+}
+.labelcs span{
+    font-size: 5px;
+    font-weight: 900;
+    margin-left: 5px;
+}
+/* message style success */
+.succsses{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: -250px;
+    background-color: var(--Grey-900-darker);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.succsses .header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.succsses p{
+    color: #ffffff7e;
+}
+/* the link styling */
+.mentor{
+    text-align: center;
+    margin-top: 10px;
+}
+/* media to make it responsive */
+@media screen and (max-width:740px) {
+    .container{
+        min-width: 500px;
+        min-height: 670px;
+        padding: 30px;
+        border-radius: 15px;
+        gap: 15px;
+    }
+    .form{
+        gap: 15px;
+    }
+}
+@media screen and (max-width:520px) {
+    .container{
+        top: 0%;
+        left: 50%;
+        transform: translate(-50% ,0);
+        gap: 15px;
+        min-width: 90%;
+        min-height: fit-content;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    .form{
+        height: 100%;
+        gap: 15px; 
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .firstName,
+    .lastName{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .query .query-input{
+        flex-direction: column;
+    }    
+    .query .query-input .general,
+    .query .query-input .support{
+    width: 100%;
+    }   
+    .succsses{
+        width: 70%;
+    }
+    .message-input textarea{
+        height: 180px;
+    }
+    .labelcs{
+        font-size: 13px;
+    }
+    .labeler{
+        font-size: 13px;
+    }
+    .mentor{
+        font-size: 12px;
+    }
+}
